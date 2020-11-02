@@ -28,6 +28,18 @@
         socket.on('mensaje', function(payload) {
             console.log('Mensaje recibido :', payload);
         });
+
+        // Para escuhar los mensajes del servidor
+        socket.on('prueba-mensaje', function(payload) {
+            console.log('Mensaje recibido :', payload);
+        });
+
+        // Para escuhar los mensajes del servidor
+        socket.on('active-bands', function(bands) {
+            //console.log('Mensaje recibido :', bands);
+            console.clear();
+            console.table(bands);
+        });
     </script>
 </body>
 
